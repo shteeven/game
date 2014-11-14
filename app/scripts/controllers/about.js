@@ -14,4 +14,9 @@ angular.module('gameApp')
       'AngularJS',
       'Karma'
     ];
+    $scope.num = 0;
+    $scope.adding = function(){
+      $scope.awesomeThings.push($scope.num);
+      $scope.num++;
+    };
   });
