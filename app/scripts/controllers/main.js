@@ -2,16 +2,24 @@
 
 /**
  * @ngdoc function
- * @name gameApp.controller:MainCtrl
+ * @name tggApp.controller:MainCtrl
  * @description
  * # MainCtrl
- * Controller of the gameApp
+ * Controller of the tggApp
  */
-angular.module('gameApp')
-  .controller('MainCtrl', ['$scope', function ($scope) {
+var app = angular.module('tggApp');
+
+app.controller('MainCtrl', ['$scope', function ($scope) {
     $scope.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',
       'Karma'
     ];
+
+
+  $scope.report = function(message){
+    console.log(message);
+  };
+
+
   }]);

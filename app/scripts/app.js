@@ -2,14 +2,14 @@
 
 /**
  * @ngdoc overview
- * @name gameApp
+ * @name tggApp
  * @description
- * # gameApp
+ * # tggApp
  *
  * Main module of the application.
  */
-angular
-  .module('gameApp', [
+var app = angular
+  .module('tggApp', [
     'ngAnimate',
     'ngAria',
     'ngCookies',
@@ -18,8 +18,10 @@ angular
     'ngRoute',
     'ngSanitize',
     'ngTouch'
-  ])
-  .config(['$routeProvider', function ($routeProvider) {
+  ]);
+
+
+app.config(['$routeProvider', function ($routeProvider) {
     $routeProvider
       .when('/', {
         templateUrl: 'views/main.html',
