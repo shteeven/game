@@ -29,10 +29,18 @@ app.directive('player', function() {
     replace:true,
     scope:{ player:'=' },
     templateUrl: 'views/templates/player.html',
-    link:function(scope){
+    link:function($scope){
+      $scope.attacked = function(hit){
+        $scope.playerStats.health -= hit;
+      };
+      $scope.attack = function(){
+        return $scope.playerStats.attack();
+      };
+      $scope.player = {name:$scope.name, stats:$scope.playerStats};
+      $scope.player.name = $scope.name;
 
-      scope.report = function(message){
-        console.log(message);
+      $scope.report = function(){
+        console.log($scope.name);
       };
     }
   };
