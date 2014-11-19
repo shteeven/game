@@ -18,7 +18,7 @@ app.directive('level', function() {
         $scope.level = val;
         $scope.playerStats.level = val;
         $scope.playerStats.health = val*10+50;
-        $scope.playerStats.attack = function(){return (val*5+20)*Math.random();};
+        $scope.playerStats.attack = function(){return (val*2+3*Math.random()+15*Math.random())};
       };
     }
   };
@@ -34,7 +34,7 @@ app.directive('player', function() {
         $scope.playerStats.health -= hit;
       };
       $scope.attack = function(){
-        return $scope.playerStats.attack();
+        $scope.latestAttack = $scope.playerStats.attack();
       };
       $scope.player = {name:$scope.name, stats:$scope.playerStats};
       $scope.player.name = $scope.name;
