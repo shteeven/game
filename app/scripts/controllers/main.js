@@ -10,16 +10,30 @@
 var app = angular.module('tggApp');
 
 app.controller('MainCtrl', ['$scope', function ($scope) {
-    $scope.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
 
+  function nextTurn(){
+    if (!$scope.offense){
+      if (Math.random >= .5){
+        $scope.offense = $scope.player1;
+        $scope.defense = $scope.player2;
+      }else{
+        $scope.offense = $scope.player2;
+        $scope.defense = $scope.player1;
+      }
+    }else{
+      var placeHolder = $scope.defense;
+      $scope.defense = $scope.offense;
+      $scope.offense = placeHolder;
+    }
+  }
 
-  $scope.report = function(message){
+  function report(message){
     console.log(message);
-  };
+  }
+
+  $scope.report = report;
+  $scope.nextTurn = nextTurn;
 
 
-  }]);
+
+}]);

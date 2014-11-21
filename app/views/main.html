@@ -1,9 +1,16 @@
 
 <div class="row marketing">
 
-  <div player="player1"></div>
+  <div player player-Stats="player1" ng-init="player1.name = 'Player 1'"></div>
   <button ng-click="report(player1)">hey</button>
-  <div player="player1"></div>
+  <div player player-Stats="player2" ng-init="player2.name = 'Player 2'"></div>
+
+  <button ng-if="offense" ng-click="report(defense.attacked);defense.attacked(offense.attack())">{{offense.name}}, Attack!</button>
+  <br>
+  <button ng-click="nextTurn()">Next Turn</button>
+  <p>{{turnPlayer1}}</p>
+  <p>{{turnPlayer2}}</p>
+  <button ng-click="report(player1.attacked)">Report Player1</button>
 
 
 
