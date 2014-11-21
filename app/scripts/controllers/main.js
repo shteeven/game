@@ -10,7 +10,11 @@
 var app = angular.module('tggApp');
 
 app.controller('MainCtrl', ['$scope', function ($scope) {
+  $scope.gameStarted = false;
 
+  function startGame(){
+    $scope.gameStarted = true;
+  }
   function nextTurn(){
     if (!$scope.offense){
       if (Math.random >= .5){
@@ -31,6 +35,7 @@ app.controller('MainCtrl', ['$scope', function ($scope) {
     console.log(message);
   }
 
+  $scope.startGame = startGame;
   $scope.report = report;
   $scope.nextTurn = nextTurn;
 

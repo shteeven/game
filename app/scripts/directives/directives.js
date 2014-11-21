@@ -34,7 +34,6 @@ app.directive('player', function() {
 
       $scope.attack = attack;
       $scope.update = update;
-
     }
   };
 });
