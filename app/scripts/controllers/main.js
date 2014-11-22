@@ -15,6 +15,7 @@ app.controller('MainCtrl', ['$scope', function ($scope) {
   function startGame(){
     $scope.gameStarted = true;
   }
+
   function nextTurn(){
     if (!$scope.offense){
       if (Math.random >= .5){

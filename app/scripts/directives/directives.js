@@ -21,6 +21,7 @@ app.directive('player', function() {
         attacked:function(hit){return null;}
       };
 
+
       function update(val){
         $scope.playerStats.level = val;
         $scope.playerStats.health = val*10+50;
