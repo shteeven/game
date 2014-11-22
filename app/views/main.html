@@ -1,17 +1,17 @@
 <div class="row marketing">
 
-    <div class="col-sm-5">
+    <div ng-class="{attacking:offense == player1; defending:offense != player1}" class="well col-sm-5">
         <div player player-Stats="player1" ng-init="player1.name = 'Player 1'"></div>
     </div>
 
-    <div class="col-sm-2">
-        <div class="btn-group">
-            <button ng-if="offense" ng-click="defense.attacked(offense.attack());nextTurn()">{{offense.name}}, Attack!</button>
-            <button ng-if="!gameStarted" ng-disabled="!player1.level || !player2.level" ng-click="nextTurn();startGame()">Start Game</button>
+    <div class="well col-sm-2">
+        <div class="form-group">
+            <button type="button" class="btn btn-danger" ng-if="offense" ng-click="defense.attacked(offense.attack());nextTurn()">Attack!</button>
+            <button type="button" class="btn btn-default" ng-if="!gameStarted" ng-disabled="!player1.level || !player2.level" ng-click="nextTurn();startGame()">Start!</button>
         </div>
     </div>
 
-    <div class="col-sm-5">
+    <div ng-class="{attacking:offense == player2; defending:offense != player2}" class="well col-sm-5">
         <div player player-Stats="player2" ng-init="player2.name = 'Player 2'"></div>
     </div>
 
