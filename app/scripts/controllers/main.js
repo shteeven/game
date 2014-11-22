@@ -15,7 +15,13 @@ app.controller('MainCtrl', ['$scope', function ($scope) {
   function startGame(){
     $scope.gameStarted = true;
   }
-
+  function resetGame(){
+    $scope.player1Reset();
+    $scope.player2Reset();
+    $scope.gameStarted = false;
+    $scope.offense = undefined;
+    $scope.defense = undefined;
+  }
   function nextTurn(){
     if (!$scope.offense){
       if (Math.random >= .5){
@@ -39,6 +45,7 @@ app.controller('MainCtrl', ['$scope', function ($scope) {
   $scope.startGame = startGame;
   $scope.report = report;
   $scope.nextTurn = nextTurn;
+  $scope.resetGame = resetGame;
 
 
 

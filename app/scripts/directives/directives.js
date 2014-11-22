@@ -8,7 +8,10 @@ app.directive('player', function() {
   return {
     restrict: 'AE',
     replace:true,
-    scope:{ playerStats:'=' },
+    scope:{
+      playerStats:'=',
+      reset: '&'
+    },
     templateUrl: 'views/templates/player.html',
     link:function($scope){
 
@@ -21,7 +24,15 @@ app.directive('player', function() {
         attacked:function(hit){return null;}
       };
 
-
+      $scope.reset = function(){
+        $scope.playerStats = {
+          level: 0,
+          health:0,
+          lastAttack:0,
+          attack:function(){return null;},
+          attacked:function(hit){return null;}
+        };
+      };
       function update(val){
         $scope.playerStats.level = val;
         $scope.playerStats.health = val*10+50;
