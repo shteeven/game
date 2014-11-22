@@ -10,7 +10,7 @@ app.directive('player', function() {
     replace:true,
     scope:{
       playerStats:'=',
-      reset: '&'
+      reset: '='
     },
     templateUrl: 'views/templates/player.html',
     link:function($scope){
@@ -32,6 +32,7 @@ app.directive('player', function() {
           attack:function(){return null;},
           attacked:function(hit){return null;}
         };
+        $scope.level = undefined;
       };
       function update(val){
         $scope.playerStats.level = val;
