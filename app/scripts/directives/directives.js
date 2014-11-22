@@ -27,7 +27,6 @@ app.directive('player', function() {
         $scope.playerStats.health = val*10+50;
         $scope.playerStats.attack = function(){return Math.round(val*3+2*Math.random()+15*Math.random());};
         $scope.playerStats.attacked = function(hit){ $scope.playerStats.health -= hit; }
-
       }
       function attack(){
         $scope.latestAttack = $scope.playerStats.attack();
