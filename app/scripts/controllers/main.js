@@ -14,6 +14,7 @@ app.controller('MainCtrl', ['$scope', function ($scope) {
 
   function startGame(){
     $scope.gameStarted = true;
+    nextTurn();
   }
   function resetGame(){
     $scope.player1Reset();
@@ -21,10 +22,11 @@ app.controller('MainCtrl', ['$scope', function ($scope) {
     $scope.gameStarted = false;
     $scope.offense = undefined;
     $scope.defense = undefined;
+    $scope.winner = undefined;
   }
   function nextTurn(){
     if (!$scope.offense){
-      if (Math.random >= .5){
+      if (Math.random() >= 0.5){
         $scope.offense = $scope.player1;
         $scope.defense = $scope.player2;
       }else{
@@ -37,15 +39,23 @@ app.controller('MainCtrl', ['$scope', function ($scope) {
       $scope.offense = placeHolder;
     }
   }
-
+  function executeAttack(){
+    $scope.defense.attacked($scope.offense.attack());
+    if ($scope.defense.health <= 0) {
+      $scope.winner = $scope.offense;
+      $scope.defense.health = 0;
+    }else{
+      nextTurn();
+    }
+  }
   function report(message){
     console.log(message);
   }
 
-  $scope.startGame = startGame;
   $scope.report = report;
-  $scope.nextTurn = nextTurn;
+  $scope.startGame = startGame;
   $scope.resetGame = resetGame;
+  $scope.executeAttack = executeAttack;
 
 
 

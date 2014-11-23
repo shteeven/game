@@ -6,8 +6,8 @@
 
     <div class="well col-sm-2">
         <div class="form-group">
-            <button type="button" class="btn btn-danger" ng-if="offense" ng-click="defense.attacked(offense.attack());nextTurn();report(offense == player1)">Attack!</button>
-            <button type="button" class="btn btn-default" ng-if="!gameStarted" ng-disabled="!player1.level || !player2.level" ng-click="nextTurn();startGame()">Start!</button>
+            <button type="button" class="btn btn-danger" ng-disabled="winner" ng-if="offense" ng-click="executeAttack()">Attack!</button>
+            <button type="button" class="btn btn-success" ng-if="!gameStarted && player1.level && player2.level" ng-click="startGame()">Start!</button>
             <button type="button" class="btn btn-info" ng-if="gameStarted" ng-click="resetGame()">Reset</button>
         </div>
     </div>

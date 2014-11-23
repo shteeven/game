@@ -21,7 +21,7 @@ app.directive('player', function() {
         health:0,
         lastAttack:0,
         attack:function(){return null;},
-        attacked:function(hit){return null;}
+        attacked:function(){return null;}
       };
 
       $scope.reset = function(){
@@ -30,7 +30,7 @@ app.directive('player', function() {
           health:0,
           lastAttack:0,
           attack:function(){return null;},
-          attacked:function(hit){return null;}
+          attacked:function(){return null;}
         };
         $scope.level = undefined;
       };
@@ -38,7 +38,7 @@ app.directive('player', function() {
         $scope.playerStats.level = val;
         $scope.playerStats.health = val*10+50;
         $scope.playerStats.attack = function(){return Math.round(val*3+2*Math.random()+15*Math.random());};
-        $scope.playerStats.attacked = function(hit){ $scope.playerStats.health -= hit; }
+        $scope.playerStats.attacked = function(hit){ $scope.playerStats.health -= hit; };
       }
       function attack(){
         $scope.latestAttack = $scope.playerStats.attack();
