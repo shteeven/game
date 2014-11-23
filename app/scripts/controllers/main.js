@@ -22,6 +22,7 @@ app.controller('MainCtrl', ['$scope', function ($scope) {
     $scope.gameStarted = false;
     $scope.offense = undefined;
     $scope.defense = undefined;
+    $scope.winner = undefined;
   }
   function nextTurn(){
     if (!$scope.offense){
