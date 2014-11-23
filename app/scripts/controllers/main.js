@@ -22,7 +22,6 @@ app.controller('MainCtrl', ['$scope', function ($scope) {
     $scope.gameStarted = false;
     $scope.offense = undefined;
     $scope.defense = undefined;
-    $scope.winner = undefined;
   }
   function nextTurn(){
     if (!$scope.offense){
@@ -43,6 +42,7 @@ app.controller('MainCtrl', ['$scope', function ($scope) {
     $scope.defense.attacked($scope.offense.attack());
     if ($scope.defense.health <= 0) {
       $scope.winner = $scope.offense;
+      $scope.loser = $scope.defense;
       $scope.defense.health = 0;
     }else{
       nextTurn();
