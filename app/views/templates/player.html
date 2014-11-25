@@ -8,5 +8,13 @@
     <br>
     <p>Player 1's level is: {{playerStats.level}}</p>
     <p>and the player's health is: {{playerStats.health}}</p>
+    <div class="progress">
+
+        <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width:50%;">
+            {{playerStats.health}}
+            <!--Put value of full health at start of fight?-->
+        </div>
+
+    </div>
     <p>and the player's latest attack did: {{latestAttack}}</p>
 </div>

@@ -48,8 +48,8 @@ body {
 }
 /* Main marketing message and sign up button */
 
-.well{
-  z-index: 1;
+.well {
+    z-index: 1;
 }
 /* Supporting marketing content */
 
@@ -64,24 +64,22 @@ body {
 .btn {
     width: 100%;
 }
-
-.player1-backboard{
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 50%;
-  background: green;
+.player1-backboard {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 50%;
+    background: green;
 }
-.player2-backboard{
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 50%;
-  right: 0;
-  background: pink;
+.player2-backboard {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    right: 0;
+    background: pink;
 }
-
 .attacking {
     background-color: rgb(217, 83, 79);
 }
