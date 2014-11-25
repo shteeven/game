@@ -21,6 +21,8 @@ body {
 .footer {
     padding-left: 15px;
     padding-right: 15px;
+    position: relative;
+    z-index: 99;
 }
 /* Custom page header */
 
@@ -70,7 +72,6 @@ body {
   left: 0;
   right: 50%;
   background: green;
-  z-index: 0;
 }
 .player2-backboard{
   position: fixed;
@@ -79,7 +80,6 @@ body {
   left: 50%;
   right: 0;
   background: pink;
-  z-index: 0;
 }
 
 .attacking {

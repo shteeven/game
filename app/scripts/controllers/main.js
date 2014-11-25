@@ -49,11 +49,7 @@ app.controller('MainCtrl', ['$scope', function ($scope) {
       nextTurn();
     }
   }
-  function report(message){
-    console.log(message);
-  }
 
-  $scope.report = report;
   $scope.startGame = startGame;
   $scope.resetGame = resetGame;
   $scope.executeAttack = executeAttack;

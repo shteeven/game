@@ -27,15 +27,11 @@ app.config(['$routeProvider', function ($routeProvider) {
         templateUrl: 'views/main.html',
         controller: 'MainCtrl'
       })
-      .when('/about', {
-        templateUrl: 'views/about.html',
-        controller: 'AboutCtrl'
-      })
-      .when('/about', {
-        templateUrl: 'views/about.html',
-        controller: 'AboutCtrl'
-      })
       .otherwise({
         redirectTo: '/'
       });
   }]);
+
+app.run(function($rootScope, $log){
+  $rootScope.$log = $log.debug;
+});
