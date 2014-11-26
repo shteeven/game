@@ -10,7 +10,7 @@
     <p>and the player's health is: {{playerStats.health}}</p>
 
   <div class="progress">
-      <progressbar value="playerStats.health/playerStats.maxHealth*100"><span style="color:black">{{playerStats.health/playerStats.maxHealth*100|number:0}}%</span></progressbar>
+      <progressbar value="playerStats.health/playerStats.maxHealth*100"><span style="color:black">{{playerStats.health/playerStats.maxHealth*100 | number:0}}%</span></progressbar>
     </div>
     <p>and the player's latest attack did: {{lastAttack}}</p>
 </div>

@@ -2,7 +2,10 @@
 
     <div ng-class="{'winner':winner == player1, 'loser': loser == player1}" class="player1-backboard"></div>
     <div ng-class="offense == player1 ? 'attacking' : 'defending'" class="well col-sm-5">
-        <div player reset="player1Reset" player-Stats="player1" ng-init="player1.name = 'Player 1'"></div>
+      <h1 ng-if="offense == player1">ATTACK!!!!!!</h1>
+      <h1 ng-if="offense != player1">DEFEND!!!!!!</h1>
+
+      <div player reset="player1Reset" player-Stats="player1" ng-init="player1.name = 'Player 1'"></div>
     </div>
 
 
@@ -16,6 +19,8 @@
 
     <div ng-class="{'winner': winner == player2, 'loser': loser == player2}" class="player2-backboard"></div>
     <div ng-class="offense == player2 ? 'attacking' : 'defending'" class="well col-sm-5">
+      <h1 ng-if="offense == player2">ATTACK!!!!!!</h1>
+      <h1 ng-if="offense != player2">DEFEND!!!!!!</h1>
         <div player reset="player2Reset" player-Stats="player2" ng-init="player2.name = 'Player 2'"></div>
     </div>
 
