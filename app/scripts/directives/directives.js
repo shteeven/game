@@ -14,38 +14,32 @@ app.directive('player', function() {
     },
     templateUrl: 'views/templates/player.html',
     link:function($scope){
-
       $scope.range = [1,2,3,4,5];
-      $scope.playerStats = {
-        level: 0,
-        health:0,
-        lastAttack:0,
-        attack:function(){return null;},
-        attacked:function(){return null;}
-      };
 
-      $scope.reset = function(){
+      function reset(){
         $scope.playerStats = {
           level: 0,
-          health:0,
+          health:1,
+          maxHealth:1,
           lastAttack:0,
           attack:function(){return null;},
           attacked:function(){return null;}
         };
         $scope.level = undefined;
-      };
+      }
       function update(val){
         $scope.playerStats.level = val;
         $scope.playerStats.health = val*10+50;
-        $scope.playerStats.attack = function(){return Math.round(val*3+2*Math.random()+15*Math.random());};
+        $scope.playerStats.maxHealth = val*10+50;
+        $scope.playerStats.attack = function(){
+          $scope.lastAttack = Math.round(val*3+2*Math.random()+15*Math.random());
+          return $scope.lastAttack;
+        };
         $scope.playerStats.attacked = function(hit){ $scope.playerStats.health -= hit; };
       }
-      function attack(){
-        $scope.latestAttack = $scope.playerStats.attack();
-      }
-
-      $scope.attack = attack;
+      $scope.reset = reset;
       $scope.update = update;
+      reset();
     }
   };
 });
