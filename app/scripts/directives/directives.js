@@ -19,13 +19,13 @@ app.directive('player', function() {
       function reset(){
         $scope.playerStats = {
           level: 0,
-          health:1,
-          maxHealth:1,
-          lastAttack:0,
+          health:0,
+          maxHealth:0,
           attack:function(){return null;},
           attacked:function(){return null;}
         };
         $scope.level = undefined;
+        $scope.lastAttack = 0;
       }
       function update(val){
         $scope.playerStats.level = val;
@@ -39,7 +39,6 @@ app.directive('player', function() {
       }
       $scope.reset = reset;
       $scope.update = update;
-      reset();
     }
   };
 });
