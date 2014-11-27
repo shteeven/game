@@ -10,7 +10,8 @@ app.directive('player', function() {
     replace:true,
     scope:{
       playerStats:'=',
-      reset: '='
+      reset: '=',
+      name: '='
     },
     templateUrl: 'views/templates/player.html',
     link:function($scope){
@@ -21,6 +22,7 @@ app.directive('player', function() {
           level: 0,
           health:0,
           maxHealth:0,
+          name: $scope.name,
           attack:function(){return null;},
           attacked:function(){return null;}
         };
