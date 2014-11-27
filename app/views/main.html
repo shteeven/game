@@ -11,9 +11,9 @@
 
     <div class="well col-sm-2 middle-well">
         <div class="battle-arena">
-            <div class="warrior ganondorf-attack"></div>
-            <b>VS</b> 
-            <div class="warrior link-attack"></div>
+            <div ng-class="offense == player1 ? 'ganondorf-attack' : 'ganondorf-defend'" class="warrior"></div>
+            <b>VS</b>
+            <div ng-class="offense == player1 ? 'link-defend' : 'link-attack'" class="warrior"></div>
         </div>
 
         <div class="form-group">
