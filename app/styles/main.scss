@@ -64,6 +64,41 @@ body {
 .btn {
     width: 100%;
 }
+.middle-well {
+    border-top: 0;
+    border-right: 0;
+    border-bottom: 0;
+    border-left: 0;
+    box-shadow: none;
+    background-color: transparent;
+}
+.battle-arena {
+    margin: 0 0 10px 0;
+    padding: 0;
+    width: 100%;
+    text-align: center;
+}
+.warrior {
+    display: block;
+    width: 85px;
+    height: 65px;
+    margin: 0;
+    border: 2px solid blue;
+}
+.ganondorf-attack {
+    background-color: #aaa;
+    background-image: url("../images/ganondorf-sprite.png");
+    background-repeat: repeat;
+    background-attachment: scroll;
+    background-position: 0px 0px;
+}
+.link-attack {
+    background-image: url("../images/link-sprite.gif");
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-color: #fff;
+    background-position: -240px -100px;
+}
 .player1-backboard {
     position: fixed;
     top: 0;
@@ -106,9 +141,9 @@ body {
         border-bottom: 0;
     }
 }
-.loser{
-  background-color: red;
+.loser {
+    background-color: red;
 }
-.winner{
-  background-color: deepskyblue;
+.winner {
+    background-color: deepskyblue;
 }
