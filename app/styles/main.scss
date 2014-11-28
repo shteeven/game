@@ -64,6 +64,86 @@ body {
 .btn {
     width: 100%;
 }
+.middle-well {
+    border-top: 0;
+    border-right: 0;
+    border-bottom: 0;
+    border-left: 0;
+    box-shadow: none;
+    background-color: transparent;
+}
+.battle-arena {
+    width: 100%;
+    height: 170px;
+    text-align: center;
+}
+.warrior {
+    display: inline-block;
+    border-radius: 4px;
+    border: 1px solid lightgray;
+    background-image: none;
+    background-color: #fff;
+}
+.ganondorf-attack {
+    width: 83px;
+    height: 65px;
+    background-color: #fff;
+    border-color: #d9534f;
+    background-image: url("../images/ganondorf-sprite.png");
+    background-repeat: no-repeat;
+    background-position: -163px -70px;
+}
+.link-attack {
+    width: 85px;
+    height: 65px;
+    background-color: #fff;
+    border-color: #d9534f;
+    background-image: url("../images/link-sprite.gif");
+    background-repeat: no-repeat;
+    background-position: -240px -100px;
+}
+.ganondorf-defend {
+    width: 50px;
+    height: 66px;
+    margin: 0 7px;
+    background-color: #fff;
+    border-color: rgb(173, 216, 230);
+    background-image: url("../images/ganondorf-sprite.png");
+    background-repeat: no-repeat;
+    background-position: -120px -75px;
+}
+.link-defend {
+    width: 46px;
+    height: 75px;
+    margin: 0 7px;
+    background-color: #fff;
+    border-color: rgb(173, 216, 230);
+    background-image: url("../images/link-sprite.gif");
+    background-repeat: no-repeat;
+    background-position: -195px -10px;
+}
+.link-win {
+    display: block;
+    width: 60px;
+    height: 80px;
+    margin: auto;
+    border: 2px dotted gold;
+    border-radius: 4px;
+    background-image: url("../images/link-sprite.gif");
+    background-repeat: no-repeat;
+    background-position: -125px -170px;
+}
+.ganondorf-win {
+    display: block;
+    width: 55px;
+    height: 80px;
+    margin: auto;
+    border: 2px dotted green;
+    border-radius: 4px;
+    background-image: url("../images/ganondorf-sprite.png");
+    background-repeat: no-repeat;
+    background-position: -240px -60px;
+}
 .player1-backboard {
     position: fixed;
     top: 0;
@@ -106,9 +186,9 @@ body {
         border-bottom: 0;
     }
 }
-.loser{
-  background-color: red;
+.loser {
+    background-color: red;
 }
-.winner{
-  background-color: deepskyblue;
+.winner {
+    background-color: deepskyblue;
 }
