@@ -90,7 +90,7 @@ body {
     background-color: #fff;
     border-color: #d9534f;
     background-image: url("../images/ganondorf-sprite.png");
-    background-repeat: repeat;
+    background-repeat: no-repeat;
     background-position: -163px -70px;
 }
 .link-attack {
@@ -109,7 +109,7 @@ body {
     background-color: #fff;
     border-color: rgb(173, 216, 230);
     background-image: url("../images/ganondorf-sprite.png");
-    background-repeat: repeat;
+    background-repeat: no-repeat;
     background-position: -120px -75px;
 }
 .link-defend {
@@ -119,8 +119,30 @@ body {
     background-color: #fff;
     border-color: rgb(173, 216, 230);
     background-image: url("../images/link-sprite.gif");
-    background-repeat: repeat;
+    background-repeat: no-repeat;
     background-position: -195px -10px;
+}
+.link-win {
+    display: block;
+    width: 60px;
+    height: 80px;
+    margin: auto;
+    border: 2px dotted gold;
+    border-radius: 4px;
+    background-image: url("../images/link-sprite.gif");
+    background-repeat: no-repeat;
+    background-position: -125px -170px;
+}
+.ganondorf-win {
+    display: block;
+    width: 55px;
+    height: 80px;
+    margin: auto;
+    border: 2px dotted green;
+    border-radius: 4px;
+    background-image: url("../images/ganondorf-sprite.png");
+    background-repeat: no-repeat;
+    background-position: -240px -60px;
 }
 .player1-backboard {
     position: fixed;

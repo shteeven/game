@@ -1,8 +1,12 @@
 <div class="modal-header">
-    <h3 class="modal-title"><b>{{winner.name}}</b> is the winner!</h3>
+    <center>
+        <h3 class="modal-title">
+            <b>{{winner.name}}</b> <br>
+            is the winner!</h3>
+    </center>
 </div>
 <div class="modal-body">
-    <img class="thumbnail" src="images/mario_squash.png" alt="Mario jumping on goomba.">
+    <img ng-class="winner.name == 'Player 1' ? 'ganondorf-win' : 'link-win'">
 </div>
 <div class="modal-footer">
     <button class="btn btn-primary" ng-click="ok()">OK</button>
